@@ -1,0 +1,75 @@
+@use "components";
+@use "layout";
+@use "fonts";
+@use "utilities/screen" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+    font-family: "Quicksand", serif !important;
+    font-optical-sizing: auto;
+    font-weight: 500 !important;
+
+    background-color: #c7d9f5 !important;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.auto-width {
+    width: auto !important;
+}
+
+div.login-container .row * {
+    width: auto;
+}
+
+header .container {
+    background-color: #ffffffff;
+    border-bottom: 2px solid #3573cf;
+    display: flex;
+}
+
+header .row {
+    height: 50px;
+    margin: 10px 0;
+    width: -webkit-fill-available;
+}
+
+header .username {
+    font-size: 1rem;
+}
+
+header div.nav-bar,
+header div.nav-bar a,
+header div.nav-bar a img {
+    height: 100%;
+}
+
+div.card {
+    border: unset;
+}
+
+div.card-header {
+    border: unset;
+    padding: 15px;
+
+    background-color: #edf3ff;
+    border-bottom: 2px solid #3573cf;
+
+    h4 {
+        margin: unset;
+        font-weight: 300;
+    }
+}
+
+@include screen-xs {
+    div.nav-bar {
+        visibility: hidden;
+    }
+}

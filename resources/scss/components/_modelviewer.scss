@@ -1,0 +1,54 @@
+div.model-viewer{
+    display: flex;
+    flex-direction: column;
+
+    width: auto !important;
+
+    div.frames{
+        position: relative;
+
+        div.frame{
+            display: none;
+
+            object-fit: none;
+
+            height: 60vh;
+            width: auto;
+
+            &[selected]{
+                display: flex;
+            }
+        }
+    }
+
+    select{
+        cursor: pointer;
+
+        padding: 6px;
+
+        border-radius: 4px;
+        border: 1px rgb(194, 194, 194) solid;
+
+        transition: all 200ms;
+
+        &:hover{
+            border: 1px #3573cf solid;
+        }
+    }
+
+    button i{
+        display: flex;
+        height: auto;
+
+        font-size: 1.2rem;
+    }
+}
+
+div.container:has(div.model-viewer){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100vh - 100px);
+    padding: 0;
+}

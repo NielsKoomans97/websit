@@ -1,7 +1,31 @@
 <?php
 
+use App\Http\Controllers\ObservationController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::resource('observations', ObservationController::class);
+
+Route::get('/', function() {
+    return redirect()->intended(route('observations.index'));
 });
+
+Route::get('/webcam', function() {
+    return view('content.webcam');
+})->name('webcam');
+
+Route::get('/weathermodel', function(){
+    return view('content.weathermodel');
+})->name('weathermodel');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

@@ -1,0 +1,77 @@
+button.primary,
+a.primary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 250ms all;
+
+    background-color: #3573cf;
+    color: white;
+    border: 2px solid transparent;
+
+    text-decoration: none;
+
+    padding: 10px;
+    border-radius: 6px;
+
+    i {
+        transition: 250ms all;
+        font-size: 1.2rem;
+        font-weight: 200;
+
+        &.ti-slideshow {
+            ::before {
+                content: "\ebc9" !important;
+            }
+        }
+    }
+
+    span {
+        margin-bottom: 2px;
+    }
+
+    &:hover {
+        background-color: #1b54a8;
+        border: 2px solid #83aef0;
+        box-shadow: inset 0px -20px 20px 0 #00000025;
+    }
+
+    &:active {
+        box-shadow: inset 0 20px 20px 0 #00000049;
+    }
+
+    &.unrounded {
+        border-radius: unset;
+    }
+
+    &.nav-button {
+        background-color: #ffffffff;
+        color: #000000;
+
+        border-radius: unset;
+
+        &:nth-child(2) {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        &:hover {
+            border: 2px solid transparent;
+
+            box-shadow: unset;
+
+            background-color: #1b54a8;
+            color: #ffffff;
+        }
+
+        &:active {
+            box-shadow: unset;
+        }
+    }
+}

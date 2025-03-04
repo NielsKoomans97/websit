@@ -1,0 +1,10 @@
+div.webcam-container,
+div.webcam-container .row{
+    height: calc(100vh - 100px);
+}
+
+div.webcam-container{
+    padding: 0;
+
+    box-shadow: 0px 0px 20px 0px #00000021;
+}

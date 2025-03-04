@@ -1,0 +1,8 @@
+div.container:has(form.login-form){
+    height: calc(100vh - 100px);
+    padding: 0;
+    
+    div.container{
+        align-items: center;
+    }
+}

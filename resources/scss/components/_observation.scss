@@ -1,0 +1,65 @@
+div.col:has(div.observation){
+    grid-template-columns: repeat(4, calc(100% / 4));
+    grid-template-rows: repeat(10, (100% / 10));
+
+    grid-auto-flow: dense;
+
+    padding: unset;
+
+    box-shadow: 0px 0px 20px 0px #00000021;
+
+    div.observation{
+        position: relative;
+
+        display: flex;
+
+        img{
+            object-fit: none;
+
+            height: 100%;
+            width: 100%;
+        }
+
+        div.observation-content{
+            position: absolute;
+
+            cursor: pointer;
+
+            transition: 250ms ease-in-out;
+
+            opacity: 0%;
+            
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            color: #ffffff;
+
+            height: 100%;
+
+            h4{
+                font-weight: 700;
+            }
+
+            p{
+                font-weight: 300;
+
+                margin: 20px 0;
+            }
+
+            small{
+                font-size: 0.8rem;
+            }
+        }
+
+        &.wide{
+            grid-column: span 2;
+        }
+
+        &.long{
+            grid-row: span 2;
+        }
+
+        &:hover div.observation-content{
+            opacity: 100%;
+            backdrop-filter: blur(6px);
+        }
+    }
+}

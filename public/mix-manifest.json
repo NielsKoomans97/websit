@@ -1,0 +1,10 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/js/bootstrap.min.js": "/js/bootstrap.min.js",
+    "/css/bootstrap-icons.min.css": "/css/bootstrap-icons.min.css",
+    "/js/alpinejs/cdn.min.js": "/js/alpinejs/cdn.min.js",
+    "/js/alpinejs/module.esm.min.js": "/js/alpinejs/module.esm.min.js",
+    "/js/alpinejs/module.cjs.js": "/js/alpinejs/module.cjs.js",
+    "/css/app.css": "/css/app.css"
+}
