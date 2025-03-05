@@ -1,0 +1,14 @@
+@use 'fonts/tabler-icons';
+@use 'sections';
+@use 'components';
+@use 'utilities/helpers';
+@use 'variables' as *;
+
+section{
+    background-color: map-get($map: $colors, $key: body-background);
+}
+
+div.container{
+    background-color: map-get($map: $colors, $key: body);
+}
+

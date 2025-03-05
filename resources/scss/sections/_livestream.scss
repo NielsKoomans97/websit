@@ -1,0 +1,7 @@
+@use '../variables' as *;
+
+section.livestream{
+    div.row{
+        height: calc(100vh - 88px);
+    }
+}
